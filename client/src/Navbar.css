@@ -1,0 +1,13 @@
+.Login{
+    display: flex;
+    flex-direction: row;
+    
+}
+@media (min-width: 768px) { 
+   
+    .Login{
+        display: flex;
+        flex-direction: column;
+    }
+    
+  }
