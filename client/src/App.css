@@ -1,19 +1,46 @@
-.flex{
+/* .flex{
+  position: relative;
   display: flex;
-  flex-direction: row;
-  
+  width: auto; // Reset width
+  height: auto;
 }
+.videos1{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.videos2{
+  position: absolute;
+  top: 50;
+  left: 50;
+} */
 
-@media (max-width: 768px) { 
+@media (max-width: 1000px) { 
    
-  .flex{
+  .video-wrapper{
       display: flex;
       flex-direction: column;
   }
-  .videos{
-    
-  }
+  
   
 }
 
+.video-wrapper{
+  width: auto; 
+  height: auto;
+  display: flex;
+ justify-content: center;
+}
+.react-player {
+  padding-top: 56.25%; 
+  position: relative; 
+}
 
+.videos{
+  margin: 1rem;
+  border: 1px solid black;
+}
+
+.react-player > div {
+  position: absolute; 
+}

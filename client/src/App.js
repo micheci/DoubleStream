@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import {useNavigate} from 'react-router-dom'
 import ReactPlayer from "react-player"
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 
@@ -19,26 +20,25 @@ function App() {
       <Navbar/>
       <Button onClick={()=>console.log(streamOne)}>Stream 1</Button>
       <Button onclick={()=>navigate("login")}>Stream 2</Button>
-      <div className="flex">
-      <ReactPlayer className="videos"
+      <div className="video-wrapper">
+      <ReactPlayer className="videos square bg-primary rounded"
         url="https://www.twitch.tv/lcs"
         controls
-        width="55rem"
-        height="35rem"
+        
       />
       <ReactPlayer className="videos"
       
         url="https://www.twitch.tv/loltyler1"
         controls
-        width="50rem"
-        height="35rem"
-       
+        
       />
+      {/* Add all the streams and just hide them depending on what
+      person clicks */}
 
 
       </div>
+      <Footer></Footer>
       
-      <h1>Home Page</h1>
       
     </div>
   );
