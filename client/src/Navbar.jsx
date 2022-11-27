@@ -1,21 +1,44 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import navbar from 'react-bootstrap/Navbar';
+import { useAuthContext } from './hooks/useAuthContext';
+import { useLogout } from './hooks/useLogout';
 import "./Navbar.css"
 
-function navbar() {
+
+const Navbar=() =>{
+  const{logout}=useLogout()
+  const {user}=useAuthContext()
+
+  const handleClick=()=>{
+    logout()
+  }
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand className="Nav" href="#home">Navbar</Navbar.Brand>
-          <Nav className=" Login">
+          <navbar.Brand className="Nav" href="#home">Navbar</navbar.Brand>
+          <nav className=" Login">
+            
+          {user && (
+            <div>
+            
+              <span>{user.userName}</span>
+              <button onClick={handleClick}>Log out</button>
+            </div>
+          )}
+
+{!user && (
+          <div>
+            <Nav.Link href="Signup">Sign up</Nav.Link>
             <Nav.Link href="login">Log in</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-           
-          </Nav>
+              {/* <button onClick={handleClick}>Log out</button> */}
+            {/* <Nav.Link href="#features">Features</Nav.Link> */}
+           </div>
+           )}
+          </nav>
         </Container>
-      </Navbar>
+      </navbar>
       <br />
      
 
@@ -24,4 +47,5 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default Navbar;
+

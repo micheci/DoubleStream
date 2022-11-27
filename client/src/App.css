@@ -1,19 +1,4 @@
-/* .flex{
-  position: relative;
-  display: flex;
-  width: auto; // Reset width
-  height: auto;
-}
-.videos1{
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.videos2{
-  position: absolute;
-  top: 50;
-  left: 50;
-} */
+
 
 @media (max-width: 1000px) { 
    

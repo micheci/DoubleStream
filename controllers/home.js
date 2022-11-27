@@ -4,13 +4,17 @@ module.exports = {
     getIndex: (req, res) => {
       res.send("Express");
     },
+    // getUserNames:async(req,res)=>{
+    //   const userNames=await Post.find({}).sort({createdAt:-1})
+    //   res.status(200).json(userNames)
+    // },
     
 
 
     create:async (req, res) => {
       Post.create({
-        title:req.body.title,
-        description:req.body.description,
+        userName:req.body.userName,
+        
     })
     .then((doc)=>console.log(doc))
     .catch((err)=>console.log(err));},
