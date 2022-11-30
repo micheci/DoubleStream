@@ -6,6 +6,7 @@ import { useLogout } from './hooks/useLogout';
 import "./Navbar.css"
 
 
+
 const Navbar=() =>{
   const{logout}=useLogout()
   const {user}=useAuthContext()
@@ -15,30 +16,27 @@ const Navbar=() =>{
   }
   return (
     <>
-      <navbar bg="dark" variant="dark">
-        <Container>
+      <nav class="navbar navbar-dark bg-dark ">  
+        <div class="container flex">
           <navbar.Brand className="Nav" href="#home">Navbar</navbar.Brand>
-          <nav className=" Login">
-            
-          {user && (
-            <div>
-            
-              <span>{user.userName}</span>
-              <button onClick={handleClick}>Log out</button>
-            </div>
-          )}
+            {user && (
+              <div>
+                <span>{user.userName}</span>
+                <button onClick={handleClick}>Log out</button>
+              </div>
+            )}
 
-{!user && (
-          <div>
-            <Nav.Link href="Signup">Sign up</Nav.Link>
-            <Nav.Link href="login">Log in</Nav.Link>
-              {/* <button onClick={handleClick}>Log out</button> */}
-            {/* <Nav.Link href="#features">Features</Nav.Link> */}
-           </div>
-           )}
-          </nav>
-        </Container>
-      </navbar>
+            {!user && (
+            <div className='signlog'>
+              <Nav.Link href="Signup">Sign up</Nav.Link>
+              <Nav.Link href="login">Log in</Nav.Link>
+                {/* <button onClick={handleClick}>Log out</button> */}
+              {/* <Nav.Link href="#features">Features</Nav.Link> */}
+            </div>
+            )}
+          
+        </div>
+      </nav>
       <br />
      
 
