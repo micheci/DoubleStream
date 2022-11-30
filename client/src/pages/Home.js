@@ -10,10 +10,8 @@ import Footer from '../Footer'
 
 
 function Home() {
-  const navigate=useNavigate();
+  
 
-  //use State to change the twitch stream via url params
-  const [streamOne,setStreamOne]=useState("lcs")
 
 
   return (
@@ -23,15 +21,11 @@ function Home() {
       <ReactPlayer className="videos square bg-primary rounded"
         url="https://www.twitch.tv/lcs"
         controls
-        
       />
       <ReactPlayer className="videos"
-   
         url="https://www.twitch.tv/loltyler1"
         controls
-        
       />
-      
       {/* Add all the streams and just hide them depending on what
       person clicks */}
 

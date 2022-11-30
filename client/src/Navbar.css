@@ -11,8 +11,41 @@
     }
     
   }
-  .flex{
-    background-color: #000;
+.flex{
+    background-color: gray;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
+.Nav{
+  font-size: 2rem;
+  margin-left: 2rem;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  color:black;
+}
+.signlog{
+ display: flex;
+  align-items: center;
+  margin-right: 10rem;
+  
+}
+.link{
+  margin-left: 2rem;
+  text-decoration: none;
+  color:black;
+}
+.link:hover {
+  color: white;
+}
+.email{
+  margin-right: 1rem;
+  font-weight: bold;
+  
+}
+.logout{
+  background-color:black;
+  text-decoration: none;
+  border-radius: 10%;
+  color:rgb(206, 128, 236);
+  cursor:pointer;
+}

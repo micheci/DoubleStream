@@ -57,6 +57,7 @@ import Signup from './pages/Signup'
 import Navbar from './Navbar'
 
 function App() {
+  
 
   const {user} =useAuthContext()
 

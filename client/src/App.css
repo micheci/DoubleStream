@@ -1,5 +1,7 @@
 
-
+body{
+  background-image: radial-gradient( blue ,purple );
+}
 @media (max-width: 1000px) { 
    
   .video-wrapper{
@@ -15,6 +17,8 @@
   height: auto;
   display: flex;
  justify-content: center;
+ margin-top: 5%;
+ 
 }
 .react-player {
   padding-top: 56.25%; 
@@ -29,3 +33,6 @@
 .react-player > div {
   position: absolute; 
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+

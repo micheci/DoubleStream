@@ -14,21 +14,21 @@ const Signup = () => {
 
 
   return (
-        <form onSubmit={handleSubmit}>
-            <h3>Sign up</h3>
+        <form onSubmit={handleSubmit} className="form-container">
+            <h3 className='formTitle'>Sign up</h3>
 
-            <label >Email:</label>
+            <label className='text'>Username</label>
             <input 
                 type="text"
                 onChange={(e)=>setUserName(e.target.value)}
                 value={userName} />
-            
-            <label >Password:</label>
+            <br></br>
+            <label className='text'>Password</label>
             <input 
                 type="password"
                 onChange={(e)=>setPassword(e.target.value)}
                 value={password} />
-            
+            <br></br>
             <button disabled={isLoading} >Sign Up</button>
             {error&& <div>{error}</div>}
         </form >

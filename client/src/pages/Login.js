@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { redirect } from 'react-router-dom'
 import {useLogin} from '../hooks/useLogin'
+import './Logincss.css'
 
 
 const Login = () => {
@@ -16,21 +17,23 @@ const Login = () => {
 
 
   return (
-        <form onSubmit={handleSubmit}>
-            <h3>Log in</h3>
+    
+        <form onSubmit={handleSubmit} className="form-container">
+            <h3 className='formTitle'>Log in</h3>
 
-            <label >Email:</label>
+            <label className='text' >Username</label>
             <input 
                 type="text"
                 onChange={(e)=>setUserName(e.target.value)}
                 value={userName} />
+                <br></br>
             
-            <label >Password:</label>
+            <label  className='text'>Password</label>
             <input 
                 type="password"
                 onChange={(e)=>setPassword(e.target.value)}
                 value={password} />
-            
+            <br></br>
             <button disabled={isLoading}>Log in</button>
             {error &&<div className="error">{error}</div>}
             

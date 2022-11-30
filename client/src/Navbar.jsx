@@ -4,6 +4,7 @@ import navbar from 'react-bootstrap/Navbar';
 import { useAuthContext } from './hooks/useAuthContext';
 import { useLogout } from './hooks/useLogout';
 import "./Navbar.css"
+import {CiStreamOn} from 'react-icons/ci'
 
 
 
@@ -16,26 +17,37 @@ const Navbar=() =>{
   }
   return (
     <>
-      <nav class="navbar navbar-dark bg-dark ">  
-        <div class="container flex">
-          <navbar.Brand className="Nav" href="#home">Navbar</navbar.Brand>
+    
+   {/* <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        
+      </Navbar> */}
+
+      <nav class="navbar navbar-dark bg-dark flex">  
+          <navbar.Brand className="Nav" href="#home"><CiStreamOn/> Double Stream</navbar.Brand>
             {user && (
-              <div>
-                <span>{user.userName}</span>
-                <button onClick={handleClick}>Log out</button>
+              <div className='signlog '>
+                <span className="email">{user.userName}</span>
+                <button className="logout" onClick={handleClick}>Log out</button>
               </div>
             )}
 
             {!user && (
-            <div className='signlog'>
-              <Nav.Link href="Signup">Sign up</Nav.Link>
-              <Nav.Link href="login">Log in</Nav.Link>
+            <div className='signlog '>
+              <Nav.Link className="link" href="Signup">Sign up</Nav.Link>
+              <Nav.Link className="link" href="login">Log in</Nav.Link>
                 {/* <button onClick={handleClick}>Log out</button> */}
               {/* <Nav.Link href="#features">Features</Nav.Link> */}
             </div>
             )}
           
-        </div>
+          
       </nav>
       <br />
      

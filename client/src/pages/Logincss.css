@@ -1,0 +1,19 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   padding-top: 2rem;
+}
+.formTitle{
+    font-size:2rem;
+}
+.text{
+    font-weight: bold;
+}
+button{
+    background-color: blue;
+    border:none;
+    color: white;
+    font-size: 18px;
+}
