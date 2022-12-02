@@ -1,6 +1,7 @@
 
 body{
-  background-image: radial-gradient( blue ,purple );
+  background-color: rgb(56, 56, 56);
+ 
 }
 @media (max-width: 1000px) { 
    
