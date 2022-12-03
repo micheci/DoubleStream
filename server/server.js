@@ -5,6 +5,7 @@ const mongoose=require("mongoose")
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const userRoutes=require('./routes/user')
+require("dotenv").config();
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
@@ -21,6 +22,6 @@ app.use("/",mainRoutes);
 app.use("/user",userRoutes);
 
 
-app.listen(3001,function(){
+app.listen(process.env.PORT,function(){
     console.log("server is running")
 })
