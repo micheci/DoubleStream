@@ -5,7 +5,7 @@ const mongoose=require("mongoose")
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const userRoutes=require('./routes/user')
-require("dotenv").config();
+
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
