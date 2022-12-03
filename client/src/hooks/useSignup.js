@@ -11,7 +11,7 @@ export const useSignup=()=>{
         setIsLoading(true)
         setError(null)
 
-        const resposne=await fetch('/user/signup',{
+        const resposne=await fetch('https://doublestreamback.onrender.com/user/signup',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({userName,password})
